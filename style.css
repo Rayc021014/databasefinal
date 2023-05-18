@@ -1,0 +1,39 @@
+.search-bar {
+    
+    margin-top: 3rem;
+    width: 40%;
+}
+
+.p_pic {
+    right: 80%;
+    width: 250px;
+}
+
+tbody, tr, td, th, thead, table {
+    border: 1px solid black;
+    padding: 0 20px 0 20px;
+    margin: auto;
+    font-size: 20px;
+    
+}
+
+.personal_info {
+    font-size: 22px;
+    padding: 10px;
+}
+
+
+.select_data_space {
+    width: 100%;
+    height: 3rem;
+    
+}
+
+.db_name {
+    font-size: 22px;
+    color: blue;
+}
+
+.footer {
+    top: 50%;
+}
