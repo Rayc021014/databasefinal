@@ -19,7 +19,7 @@ tbody, tr, td, th, thead, table {
 
 .personal_info {
     font-size: 22px;
-    padding: 10px;
+    
 }
 
 
@@ -36,4 +36,20 @@ tbody, tr, td, th, thead, table {
 
 .footer {
     top: 50%;
+}
+
+.section-title {
+    font-size: 28px;
+    padding-top: 20px;
+}
+
+.wrapper{
+    width: 650px;
+    margin: 0 auto;
+}
+.page-header h2{
+    margin-top: 0;
+}
+table tr td:last-child a{
+    margin-right: 15px;
 }
