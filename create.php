@@ -14,7 +14,7 @@
                 //delete auto = 1
                 $sql = "INSERT INTO $db VALUES(id, '$school', '$major', '$degree');";
                 mysqli_query($conn, $sql);
-                
+                header('Location: view.php');                
                 break;
             case "awards_db":
                 $classification = $_POST["classification"];
@@ -27,7 +27,7 @@
 
                 $sql = "INSERT INTO $db VALUES(id, '$classification', '$school_year', '$award', '$awarding_unit', '$date', '$topic', '$students');";
                 mysqli_query($conn, $sql);
-
+                header('Location: view.php');
                 break;
             case "books_db":
                 $classification = $_POST["classification"];
@@ -40,6 +40,7 @@
 
                 $sql = "INSERT INTO $db VALUES(id, '$classification', '$author', '$book_name', '$publication', '$country', '$date', '$pages');";
                 mysqli_query($conn, $sql);
+                header('Location: view.php');
                 break;
             case "experience_db":
                 $working_unit = $_POST["working_unit"];
@@ -54,6 +55,7 @@
 
                 $sql = "INSERT INTO $db VALUES(id, '$ch_name', '$en_name');";
                 mysqli_query($conn, $sql);
+                header('Location: view.php');
                 break;
             case "papers_db":
                 $paper_type = $_POST["paper_type"];
@@ -66,6 +68,7 @@
                 
                 $sql = "INSERT INTO $db VALUES(id, '$paper_type', '$author', '$paper_name', '$event_name', '$date', '$paper_db', '$place');";
                 mysqli_query($conn, $sql);
+                header('Location: view.php');
                 break;
             case "personal_info_db":
                 $name = $_POST["name"];
@@ -75,6 +78,7 @@
 
                 $sql = "INSERT INTO $db VALUES('$name', '$email', '$extension_number', '$work_position');";
                 mysqli_query($conn, $sql);
+                header('Location: view.php');
                 break;
             case "plan_db":
                 $plan_type = $_POST["plan_type"];
@@ -85,6 +89,7 @@
 
                 $sql = "INSERT INTO $db VALUES(id, '$plan_type', '$name', '$date', '$plan_num', '$position');";
                 mysqli_query($conn, $sql);
+                header('Location: view.php');
                 break;
             case "speech_db":
                 $topic = $_POST["topic"];
@@ -93,8 +98,8 @@
 
                 $sql = "INSERT INTO $db VALUES(id, '$topic', '$invitation_unit', '$date');";
                 mysqli_query($conn, $sql);
+                header('Location: view.php');
                 break;
-
         }
 
 
