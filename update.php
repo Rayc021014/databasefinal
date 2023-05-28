@@ -21,7 +21,7 @@
     <div class="wrapper" style="width: 500px; margin: 0 auto;">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
+                <div class="col-md-12">
                     <div class="page-header">
                         <h2>Update Data</h2>
                     </div>

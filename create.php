@@ -101,18 +101,7 @@
                 header('Location: view.php');
                 break;
         }
-
-
     }
-
-    
-
-?>
-<?php
-    
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -145,7 +134,7 @@
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
+                <div class="col-md-12">
                     <div class="page-header">
                         <h2>Create Data</h2>
                     </div>
