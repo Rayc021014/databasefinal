@@ -5,17 +5,17 @@
 }
 
 .p_pic {
-    right: 80%;
-    width: 250px;
+    
+    width: 300px;
 }
-
+/*
 tbody, tr, td, th, thead, table {
     border: 1px solid black;
     padding: 0 20px 0 20px;
     margin: auto;
     font-size: 20px;
     
-}
+}*/
 
 .personal_info {
     font-size: 22px;
@@ -52,4 +52,13 @@ tbody, tr, td, th, thead, table {
 }
 table tr td:last-child a{
     margin-right: 15px;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.side-nav {
+    position: center;
+    font-size: 25px;
 }

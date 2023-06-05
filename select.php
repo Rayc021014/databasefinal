@@ -122,7 +122,25 @@
             $result = mysqli_query($conn, $sql);
 
             if ($result->num_rows > 0) {
-                echo '<div class="container-lg db_name">' . $db . '</div>';
+                echo '<div class="container-lg db_name">';
+                switch($db) {
+                    case "speech_db":
+                        echo "演講";
+                        break;
+                    case "plan_db":
+                        echo "計畫";
+                        break;
+                    case "papers_db":
+                        echo "論文";
+                        break;
+                    case "books_db":
+                        echo "專書/教科書";
+                        break;
+                    case "awards_db":
+                        echo "獲獎紀錄";
+                        break;
+                }
+                echo '</div>';
                 echo '<table class="table table-striped table-hover container-lg">';
                 
                 //print column name

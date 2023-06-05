@@ -455,7 +455,60 @@
                                         <a href="view.php" class="btn btn-danger">Cancel</a>
                                     </form>
                                     ';
-
+                                    break;
+                                case "curriculum_db":
+                                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                        $db = $_POST["db"];
+                                        $id = $_POST["id"];
+                                        $weekday = $_POST["weekday"];
+                                        $time = $_POST["time"];
+                                        $name = $_POST["name"];
+                                        $place = $_POST["place"];
+                                        $class = $_POST["class"];
+                                        $course = $_POST["course"];
+                                            
+                                        $sql = "UPDATE $db SET weekday='$weekday', time='$time', name='$name', place='$place', class='$class', course='$course' WHERE id=$id";
+                                        $result = mysqli_query($conn, $sql);
+                                            
+                                        header('Location: view.php');
+                                    }
+                                    $sql = "SELECT * FROM $db WHERE id = $id";
+                                    $result = mysqli_query($conn, $sql);
+                                    $row = mysqli_fetch_row($result);
+                                    mysqli_free_result($result);
+                                    echo 
+                                    '
+                                    <form id="curriculum" action="?id=' . $id .'&db=' . $db . '" method="post">
+                                        <div class="form-outline">
+                                            <label for="weekday" class="form-label">Enter weekday: </label>
+                                            <input type="text" id="weekday" name="weekday" class="form-control" '. "value='$row[1]' required>
+                                        </div>" . '
+                                        <div class="form-outline">
+                                            <label for="time" class="form-label">Enter time: </label>
+                                            <input type="text" id="time" name="time" class="form-control" '. "value='$row[2]' required>
+                                        </div>" . '
+                                        <div class="form-outline">
+                                            <label for="name" class="form-label">Enter name: </label>
+                                            <input type="text" id="name" name="name" class="form-control" '. "value='$row[3]' required>
+                                        </div>" . '
+                                        <div class="form-outline">
+                                            <label for="place" class="form-label">Enter place: </label>
+                                            <input type="text" id="place" name="place" class="form-control" '. "value='$row[4]' >
+                                        </div>" . '
+                                        <div class="form-outline">
+                                            <label for="class" class="form-label">Enter class: </label>
+                                            <input type="text" id="class" name="class" class="form-control" '. "value='$row[5]' >
+                                        </div>" . '
+                                        <div class="form-outline">
+                                            <label for="course" class="form-label">Enter course: </label>
+                                            <input type="text" id="course" name="course" class="form-control" '. "value='$row[6]' >
+                                        </div>" . '
+                                        <input type="hidden" name="db" value="' . $db . '">
+                                        <input type="hidden" name="id" value="' . $id . '">
+                                        <input type="submit" class="btn btn-primary"> 
+                                        <a href="view.php" class="btn btn-danger">Cancel</a>
+                                    </form>
+                                    ';
 
 
 

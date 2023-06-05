@@ -100,6 +100,18 @@
                 mysqli_query($conn, $sql);
                 header('Location: view.php');
                 break;
+            case "curriculum_db":
+                $weekday = $_POST["weekday"];
+                $time = $_POST["time"];
+                $name = $_POST["name"];
+                $place = $_POST["place"];
+                $class = $_POST["class"];
+                $course = $_POST["course"];
+
+                $sql = "INSERT INTO $db VALUES(id, '$weekday', '$time', '$name', '$place', '$class', '$course');";
+                mysqli_query($conn, $sql);
+                header('Location: view.php');
+                break;
         }
     }
 ?>
@@ -149,7 +161,8 @@
                             <option value="papers">論文</option>
                             <option value="personal_info">個人資料</option>
                             <option value="plan">計畫</option>
-                            <option value="speech">演講</option>               
+                            <option value="speech">演講</option>    
+                            <option value="curriculum">課程</option>           
                         </select>
                     </label>
                     
@@ -394,6 +407,38 @@
                         <a href="view.php" class="btn btn-danger">Cancel</a>
                     </form>
 
+                    <form id="curriculum" style="display: none;" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                        <div class="form-outline">
+                            <label for="weekday" class="form-label">Enter weekday: </label>
+                            <input type="text" id="weekday" name="weekday" class="form-control" required>
+                        </div>
+                        <div class="form-outline">
+                            <label for="time" class="form-label">Enter time: </label>
+                            <input type="text" id="time" name="time" class="form-control" required>
+                        </div>
+                        <div class="form-outline">
+                            <label for="name" class="form-label">Enter name: </label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-outline">
+                            <label for="place" class="form-label">Enter place: </label>
+                            <input type="text" id="place" name="place" class="form-control" required>
+                        </div>
+                        <div class="form-outline">
+                            <label for="class" class="form-label">Enter class: </label>
+                            <input type="text" id="class" name="class" class="form-control" required>
+                        </div>
+                        <div class="form-outline">
+                            <label for="course" class="form-label">Enter course: </label>
+                            <input type="text" id="course" name="course" class="form-control" required>
+                        </div>
+                        <div style="display: none;">                        
+                            <label for="db"></label>
+                            <input type="text" name="db" value="curriculum">
+                        </div>
+                        <input type="submit" class="btn btn-primary"> 
+                        <a href="view.php" class="btn btn-danger">Cancel</a>
+                    </form>
                 </div>
             </div>
         </div>

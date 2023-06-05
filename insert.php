@@ -26,7 +26,16 @@
 
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-    </form> 
+    </form>
+    <nav class="navbar">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#">academic_qualification</a></li>
+                            <br>
+                            <li class="nav-item"><a href="#">awards</a></li>
+                        </ul>
+                    </div>
+    </nav> 
 </body>
 </html>
 
